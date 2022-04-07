@@ -42,7 +42,7 @@
                         <div >
                     
                    <p> </form></p> 
-                    <p><button <a href="logado.html"</a> type="submit">Enviar</button></p>
+                    <p><button  href="logado.html" type="submit">Enviar</button></p>
                             <p> <a href="Cadastro.html" id="text" :>Não tem uma conta ? Clique aqui!! </a></p>
                         </div>
                     </form>
