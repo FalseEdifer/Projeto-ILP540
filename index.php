@@ -1,3 +1,13 @@
+<?php 
+    $login = $senha = $check = "";
+    if(isset($_COOKIE["login"])){
+        $login = $_COOKIE["login"];
+        $check = "checked";
+    }
+    if(isset($_COOKIE["senha"])){
+        $senha = $_COOKIE["senha"];
+    }
+?>
 <!DOCTYPE html>
 
 <html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
@@ -18,11 +28,11 @@
                     <div>
                          <img id="img" src="IMG/sunset-fuji-mountain copiar.png">
                     </div>
-                    <form class="needs-validation" novalidate>
+                    <form class="needs-validation" novalidate action="process.php" method="post">
                         <div>
                         <div>
                             <label for="validationCustom01">Usuario</label>
-                            <input type="text" class="form-control" id="validationCustom01" placeholder="Usuario" value="Mark" required>
+                            <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario" required>
                             <div class="valid-feedback">
                             Tudo certo!
                             </div>
@@ -32,7 +42,7 @@
                             <div class="input-group">
                             <div class="input-group-prepend">
                             </div>
-                            <input type="text" class="form-control" id="validationCustomUsername" placeholder="Senha" aria-describedby="inputGroupPrepend" required>
+                            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha" aria-describedby="inputGroupPrepend" required>
                             <div class="invalid-feedback">
                                 Por favor, escolha uma senha.
                             </div>
@@ -41,8 +51,11 @@
                         </div>
                         <div >
                     
-                   <p> </form></p> 
-                    <p><button  href="logado.html" type="submit">Enviar</button></p>
+                  
+                    <p><button  type="submit">Enviar</button></p>
+                    <div class="save">
+                        <input type="checkbox" name="salvar" <?= $check ?>> Salvar dados 
+                    </div>
                             <p> <a href="Cadastro.html" id="text" :>Não tem uma conta ? Clique aqui!! </a></p>
                         </div>
                     </form>
