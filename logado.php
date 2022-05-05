@@ -1,3 +1,4 @@
+<?php include("autentica.php"); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -56,6 +57,9 @@
         <img class="card-img-top" src="IMG/ehcxfnguyaa6owu.jpeg" alt="Imagem de capa do card">
         
       </div>
+      <div >
+         <button><a href="logout.php">Sair</a></button>
+       </div>     
 
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
